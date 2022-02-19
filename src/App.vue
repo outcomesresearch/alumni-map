@@ -16,11 +16,13 @@ import {
   LEGEND_TITLE_TOP,
   NO_ZIPCODE,
 } from "./assets/javascript/constants";
+import { createTooltip } from "./helpers/createTooltip";
 import json from "./assets/json/us-states.json";
 import zips from "./assets/json/us_zip_codes_SMALL.json";
 import { large, washU } from "./assets/javascript/largeCities.js";
 import { small } from "./assets/javascript/smallCities.js";
 import { graduates } from "./assets/javascript/graduates.js";
+import tippy from "tippy.js";
 
 var width = 810;
 var height = 310;
@@ -113,6 +115,7 @@ export default {
         .attr("cx", ([, [{ lat, lon }]]) => projection([lon, lat])[0])
         .attr("cy", ([, [{ lat, lon }]]) => projection([lon, lat])[1])
         .attr("class", "tooltip bubble")
+        .attr("data-tippy-content", createTooltip)
         .attr("r", ([name]) => radius(count[name]));
 
       var l_WidthCenter = width / 2 + 370;
@@ -223,11 +226,21 @@ export default {
   },
   mounted() {
     this.createMap();
+
+    tippy(".tooltip", {
+      delay: 0,
+      duration: 0,
+      arrow: true,
+      theme: "light",
+      allowHTML: true,
+    });
   },
 };
 </script>
 
 <style>
 @import "./assets/css/index.css";
+@import "~tippy.js/dist/tippy.css";
+@import "~tippy.js/themes/light.css";
 @import "./assets/css/tippy.css";
 </style>

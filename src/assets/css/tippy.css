@@ -1,0 +1,26 @@
+.tippy-box[data-theme="light"] {
+  background-color: white;
+  font: 12px sans-serif;
+  border: 1px solid #b4bab6;
+  color: #333;
+  text-align: left;
+}
+
+.tippy-box[data-theme="light"] div div {
+  line-height: 100%;
+  margin-top: 2px;
+}
+
+.tippy-box[data-theme="light"] div div:last-child {
+  line-height: 100%;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.tippy-box[data-placement^="top"] .tippy-arrow::before {
+  border-top: 7px solid #b4bab6;
+}
+
+.tippy-box[data-placement^="bottom"] .tippy-arrow::before {
+  border-bottom: 7px solid #b4bab6;
+}
