@@ -15,6 +15,8 @@ import {
   OVERSIGHT_DISCLAIMER,
   LEGEND_TITLE_TOP,
   NO_ZIPCODE,
+  COLOR,
+  RADIUS,
 } from "./assets/javascript/constants";
 import { createTooltip } from "./helpers/createTooltip";
 import json from "./assets/json/us-states.json";
@@ -26,23 +28,99 @@ import tippy from "tippy.js";
 
 var width = 810;
 var height = 310;
-
-var radius = (n) => Math.sqrt(n) * 10;
+var l_WidthCenter = width / 2 + 370;
 
 // D3 Projection
-var projection = d3
-  .geoAlbersUsa()
-  .translate([width / 2, height - 50]) // translate to position on screen
-  .scale([1000]); // scale things down so see entire US
+var projection = d3.geoAlbersUsa().translate([width / 2, height - 50]); // translate to position on screen
 
 // Define path generator
 var path = d3.geoPath().projection(projection); // tell path generator to use albersUsa projection
 
+function _d(parent, _a, _c) {
+  parent = parent.append(_a);
+  if (_c) parent = parent.attr("class", _c);
+  return parent;
+}
+
 export default {
   name: "Alumni-map",
+  data() {
+    return { svg: undefined };
+  },
   methods: {
+    createOversightNotice() {
+      _d(this.svg, "g", "disclaimer")
+        .attr("transform", `translate(${l_WidthCenter + 75},${height + 225}`)
+        .append("text")
+        .text(OVERSIGHT_DISCLAIMER);
+    },
+    createLegend() {
+      let group1 = _d(this.svg, "g", "legend1Group").attr(
+        "transform",
+        `translate(${l_WidthCenter},${height - 50})`
+      );
+
+      _d(group1, "text", "legend title").text(LEGEND_TITLE_TOP);
+
+      var legend1 = _d(group1, "g", "legend")
+        .attr("transform", `translate(0,${2 * RADIUS(15) + 10})`)
+        .selectAll("g")
+        .data([1, 5, 15])
+        .enter()
+        .append("g");
+
+      _d(legend1, "circle")
+        .attr("cy", (d) => -RADIUS(d))
+        .attr("r", RADIUS);
+
+      _d(legend1, "text")
+        .attr("y", (d) => -2 * RADIUS(d))
+        .attr("dy", "1.3em")
+        .text((d) => d);
+
+      let group2 = _d(this.svg, "g", "legend2Group").attr(
+        "transform",
+        `translate(${l_WidthCenter},${height + 75})`
+      );
+
+      _d(group2, "text", "legend title").text(LEGEND_TITLE_BOTTOM);
+
+      var legend2 = _d(group2, "g", "legend2")
+        .attr("transform", `translate(-40,10)`)
+        .selectAll("g")
+        .data(COLOR.range().slice().reverse())
+        .enter()
+        .append("g")
+        .attr("transform", (d, i) => "translate(0," + i * 20 + ")");
+
+      _d(legend2, "circle", "legend rects")
+        .attr("cy", 7)
+        .attr("r", 7)
+        .style("fill", COLOR);
+
+      _d(legend2, "text")
+        .attr("x", 12)
+        .attr("y", 9)
+        .attr("dy", ".35em")
+        .style("text-anchor", "start")
+        .text((d, i) => TOOLTIP_COLORS[Object.keys(TOOLTIP_COLORS)[i]].title);
+    },
+
+    createTitle() {
+      var titleContainer = _d(this.svg, "g").attr(
+        "transform",
+        "translate(" + (width / 2 - 250) + "," + (height - 290) + ")"
+      );
+
+      _d(titleContainer, "text", "title").text(TITLE);
+
+      _d(titleContainer, "text", "subtitle")
+        .attr("transform", "translate(" + 120 + "," + 20 + ")")
+        .text(SUBTITLE);
+    },
+
     createMap() {
-      let svg = d3
+      this.svg = d3
         .select("#map")
         .append("div")
         .classed("svg-container", true) //container class to make it responsive
@@ -53,7 +131,7 @@ export default {
         //class to make it responsive
         .classed("svg-content-responsive", true);
 
-      svg
+      this.svg
         .selectAll("path")
         .data(json.features)
         .enter()
@@ -106,7 +184,7 @@ export default {
       let count = {};
       groupedGrads.forEach((grouped, name) => (count[name] = grouped.length));
 
-      svg
+      this.svg
         .selectAll("circle")
         .data(groupedGrads)
         .enter()
@@ -116,116 +194,14 @@ export default {
         .attr("cy", ([, [{ lat, lon }]]) => projection([lon, lat])[1])
         .attr("class", "tooltip bubble")
         .attr("data-tippy-content", createTooltip)
-        .attr("r", ([name]) => radius(count[name]));
-
-      var l_WidthCenter = width / 2 + 370;
-
-      var titleContainer = svg
-        .append("g")
-        .attr(
-          "transform",
-          "translate(" + (width / 2 - 250) + "," + (height - 270) + ")"
-        );
-
-      titleContainer.append("text").attr("class", "title").text(TITLE);
-
-      titleContainer
-        .append("text")
-        .attr("class", "subtitle")
-        .attr("transform", "translate(" + 120 + "," + 20 + ")")
-        .text(SUBTITLE);
-
-      svg
-        .append("g")
-        .attr("class", "disclaimer")
-        .attr(
-          "transform",
-          "translate(" + (l_WidthCenter + 75) + "," + (height + 225) + ")"
-        )
-        .append("text")
-        .text(OVERSIGHT_DISCLAIMER);
-
-      svg
-        .append("g")
-        .attr(
-          "transform",
-          "translate(" + l_WidthCenter + "," + (height - 50) + ")"
-        )
-        .append("text")
-        .attr("class", "legend title")
-        .text(LEGEND_TITLE_TOP);
-
-      var legend = svg
-        .append("g")
-        .attr("class", "legend")
-        .attr(
-          "transform",
-          "translate(" + l_WidthCenter + "," + (height + 40) + ")"
-        )
-        .selectAll("g")
-        .data([1, 5, 15])
-        .enter()
-        .append("g");
-
-      legend
-        .append("circle")
-        .attr("cy", (d) => -radius(d))
-        .attr("r", radius);
-
-      legend
-        .append("text")
-        .attr("y", (d) => -2 * radius(d))
-        .attr("dy", "1.3em")
-        .text((d) => d);
-
-      svg
-        .append("g")
-        .attr(
-          "transform",
-          "translate(" + l_WidthCenter + "," + (height + 75) + ")"
-        )
-        .append("text")
-        .attr("class", "legend title")
-        .text(LEGEND_TITLE_BOTTOM);
-
-      var color = d3
-        .scaleOrdinal()
-        .range(Object.keys(TOOLTIP_COLORS).map((v) => TOOLTIP_COLORS[v].color));
-
-      // var r = 74,
-      //   p = 10;
-
-      var legend2 = svg
-        .append("g")
-        .attr("class", "legend2")
-        .attr(
-          "transform",
-          "translate(" + (l_WidthCenter - 35) + "," + (height + 85) + ")"
-        )
-        .selectAll("g")
-        .data(color.range().slice().reverse())
-        .enter()
-        .append("g")
-        .attr("transform", (d, i) => "translate(0," + i * 20 + ")");
-
-      legend2
-        .append("circle")
-        .attr("cy", 7)
-        .attr("r", 7)
-        .attr("class", "legend rects")
-        .style("fill", color);
-
-      legend2
-        .append("text")
-        .attr("x", 12)
-        .attr("y", 9)
-        .attr("dy", ".35em")
-        .style("text-anchor", "start")
-        .text((d, i) => TOOLTIP_COLORS[Object.keys(TOOLTIP_COLORS)[i]].title);
+        .attr("r", ([name]) => RADIUS(count[name]));
     },
   },
   mounted() {
     this.createMap();
+    this.createOversightNotice();
+    this.createLegend();
+    this.createTitle();
 
     tippy(".tooltip", {
       delay: 0,

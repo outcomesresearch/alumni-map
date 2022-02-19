@@ -22,6 +22,5 @@ export function createTooltip([name, gradsInThatLocation]) {
       content += `${val.firstName} ${val.lastName} (${val.finalYearInResidencyProgram})`;
       content += `</div>`;
     });
-  console.log(content);
   return content;
 }

@@ -1,3 +1,5 @@
+import * as d3 from "d3";
+
 export const TITLE =
   "Practice Locations of Washington University Otolaryngology Graduates";
 export const SUBTITLE =
@@ -20,3 +22,9 @@ export const NO_ZIPCODE = ({ firstName, lastName, zipcode }) => {
   // Log that we could not find zipcode for this person
   console.warn(`${firstName} ${lastName} not found.  Zip Code (${zipcode})`);
 };
+
+export const RADIUS = (n) => Math.sqrt(n) * 10;
+
+export const COLOR = d3
+  .scaleOrdinal()
+  .range(Object.keys(TOOLTIP_COLORS).map((v) => TOOLTIP_COLORS[v].color));
