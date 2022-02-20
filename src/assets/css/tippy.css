@@ -4,6 +4,7 @@
   border: 1px solid #b4bab6;
   color: #333;
   text-align: left;
+  box-shadow: none;
 }
 
 .tippy-box[data-theme="light"] div div {
@@ -17,10 +18,10 @@
   margin-bottom: 2px;
 }
 
-.tippy-box[data-placement^="top"] .tippy-arrow::before {
+div[id^="tippy-"] .tippy-box[data-placement^="top"] .tippy-arrow::before {
   border-top: 7px solid #b4bab6;
 }
 
-.tippy-box[data-placement^="bottom"] .tippy-arrow::before {
+div[id^="tippy-"] .tippy-box[data-placement^="bottom"] .tippy-arrow::before {
   border-bottom: 7px solid #b4bab6;
 }

@@ -72,6 +72,10 @@ body {
   outline: none;
 }
 
+.bubble:hover {
+  fill-opacity: 0.9;
+}
+
 .patch {
   width: 12px;
   height: 12px;
