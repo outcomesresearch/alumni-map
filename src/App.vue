@@ -47,6 +47,9 @@ export default {
   data() {
     return { svg: undefined };
   },
+  created() {
+    document.title = "WashU Otolaryngology Graduates Map";
+  },
   methods: {
     createOversightNotice() {
       _d(this.svg, "g", "disclaimer")
