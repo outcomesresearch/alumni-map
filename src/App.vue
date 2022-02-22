@@ -1,5 +1,7 @@
 <template>
-  <div id="map"></div>
+  <outcomes-research-wrapper :_title="`Oto Graduates Map`">
+    <div id="map"></div
+  ></outcomes-research-wrapper>
 </template>
 
 <script>
@@ -46,9 +48,6 @@ export default {
   name: "Alumni-map",
   data() {
     return { svg: undefined };
-  },
-  created() {
-    document.title = "WashU Otolaryngology Graduates Map";
   },
   methods: {
     createOversightNotice() {
