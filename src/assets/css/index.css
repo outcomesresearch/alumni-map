@@ -4,7 +4,6 @@
 
 body {
   font: 11px sans-serif !important;
-  overflow: hidden;
 }
 
 .legend {
@@ -91,14 +90,22 @@ body {
   position: relative;
   /*height: 100%;*/
   width: 100%;
-  padding-bottom: 100%;
   vertical-align: middle;
   overflow: hidden;
 }
 
-.svg-content-responsive {
-  display: inline-block;
-  position: absolute;
-  top: 0px;
-  left: 0px;
+#map {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  padding: 10px;
+  padding-right: 0px;
+  /* correction for map + legend not being positioned perfectly withn svg  */
+}
+@media only screen and (min-width: 600px) {
+  #map {
+    padding: 45px;
+  }
 }

@@ -13,8 +13,8 @@
     "@turf/nearest-point": "^6.5.0",
     "core-js": "^3.6.5",
     "d3": "^7.3.0",
-    "tippy.js": "^6.3.7",
     "shared-code": "git+https://github.com/outcomesresearch/shared-code.git",
+    "tippy.js": "^6.3.7",
     "vue": "^2.6.11"
   },
   "devDependencies": {

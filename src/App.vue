@@ -1,7 +1,9 @@
 <template>
   <outcomes-research-wrapper :_title="`Oto Graduates Map`">
-    <div id="map"></div
-  ></outcomes-research-wrapper>
+    <outcomes-navbar />
+    <div id="map"></div>
+    <outcomes-footer :copyright="copyright" />
+  </outcomes-research-wrapper>
 </template>
 
 <script>
@@ -47,7 +49,10 @@ function _d(parent, _a, _c) {
 export default {
   name: "Alumni-map",
   data() {
-    return { svg: undefined };
+    return {
+      copyright: `Copyright © 2022, Washington University School of Medicine, St. Louis, Missouri`,
+      svg: undefined,
+    };
   },
   methods: {
     createOversightNotice() {
@@ -130,8 +135,8 @@ export default {
         //responsive SVG needs these 2 attributes and no width and height attr
         .attr("preserveAspectRatio", "xMinYMin meet")
         .attr("viewBox", "0 0 " + " 900 " + " 550")
-        //class to make it responsive
-        .classed("svg-content-responsive", true);
+        .attr("width", "100%")
+        .attr("height", "100%");
 
       this.svg
         .selectAll("path")
