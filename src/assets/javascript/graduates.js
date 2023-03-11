@@ -285,7 +285,7 @@ export const graduates = [
       "Assistant Professor; Associate Director, Resident Education Program",
     currentAffiliation: "Washington University School of Medicine in St. Louis",
     departments: "Otolaryngology-Head and Neck Surgery",
-    zipcode: 63110,
+    zipcode: 63368,
     facsStatus1IfYes0IfNo: 1,
     links: "http://oto.wustl.edu/About-Us/Faculty-Physicians/Joseph-Bradley",
     email: "joseph.bradley@wustl.edu",
