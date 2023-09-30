@@ -17,6 +17,18 @@ export const washU = {
 export const large = [
   {
     type: "Feature",
+    properties: { featureIndex: 20, distanceToPoint: 5.055371102178251 },
+    geometry: {
+      type: "Point",
+      coordinates: [
+        -79.9958864,
+        40.44062479999999,
+        { city: "Pittsburgh", state: "Pennsylvania" },
+      ],
+    },
+  },
+  {
+    type: "Feature",
     properties: { featureIndex: 0, distanceToPoint: 83.7110142664199 },
     geometry: {
       type: "Point",

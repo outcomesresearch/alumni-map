@@ -27,6 +27,30 @@
     "Longitude": -94.5959
   },
   {
+    "Zip Code": 40292,
+    "Place Name": "Louisville",
+    "State": "Kentucky",
+    "State Abbreviation": "KY",
+    "Latitude": 38.189,
+    "Longitude": -85.6768
+  },
+  {
+    "Zip Code": 66045,
+    "Place Name": "Lawrence",
+    "State": "Kansas",
+    "State Abbreviation": "KS",
+    "Latitude": 38.959,
+    "Longitude": -95.2499
+  },
+  {
+    "Zip Code": 77058,
+    "Place Name": "League City",
+    "State": "Texas",
+    "State Abbreviation": "TX",
+    "Latitude": 29.5716,
+    "Longitude": -95.0998
+  },
+  {
     "Zip Code": 77030,
     "Place Name": "Houston",
     "State": "Texas",
@@ -124,6 +148,15 @@
     "County": "Jefferson",
     "Latitude": 33.5446,
     "Longitude": -86.9292
+  },
+  {
+    "Zip Code": 35801,
+    "Place Name": "Huntsville",
+    "State": "Alabama",
+    "State Abbreviation": "AL",
+    "County": "Madison",
+    "Latitude": 34.7269,
+    "Longitude": -86.5673
   },
   {
     "Zip Code": 75093,
@@ -486,6 +519,14 @@
     "Longitude": -87.038
   },
   {
+    "Zip Code": 37235,
+    "Place Name": "Nashville",
+    "State": "Tennessee",
+    "State Abbreviation": "TN",
+    "Latitude": 36.1866,
+    "Longitude": -86.7852
+  },
+  {
     "Zip Code": 21204,
     "Place Name": "Towson",
     "State": "Maryland",
@@ -846,6 +887,15 @@
     "Longitude": -118.2084
   },
   {
+    "Zip Code": 15090,
+    "Place Name": "Wexford",
+    "State": "Pennsylvania",
+    "State Abbreviation": "PA",
+    "County": "Allegheny",
+    "Latitude": 40.612,
+    "Longitude": -80.0649
+  },
+  {
     "Zip Code": 15224,
     "Place Name": "Pittsburgh",
     "State": "Pennsylvania",
@@ -871,6 +921,15 @@
     "County": "Wilkes",
     "Latitude": 36.2017,
     "Longitude": -81.1286
+  },
+  {
+    "Zip Code": 27101,
+    "Place Name": "Winston-Salem",
+    "State": "North Carolina",
+    "State Abbreviation": "NC",
+    "County": "Forsyth",
+    "Latitude": 36.1024,
+    "Longitude": -80.2228
   },
   {
     "Zip Code": 72202,

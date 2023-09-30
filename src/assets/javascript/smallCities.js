@@ -29,6 +29,18 @@ export const small = [
     geometry: {
       type: "Point",
       coordinates: [
+        -86.5673,
+        34.7269,
+        { city: "Huntsville", state: "Alabama" },
+      ],
+    },
+  },
+  {
+    type: "Feature",
+    properties: { featureIndex: 2, distanceToPoint: 12.042511240664115 },
+    geometry: {
+      type: "Point",
+      coordinates: [
         -86.80248999999999,
         33.5206608,
         { city: "Birmingham", state: "Alabama" },
@@ -73,6 +85,38 @@ export const small = [
   },
   {
     type: "Feature",
+    properties: { featureIndex: 6, distanceToPoint: 0.47216290435729025 },
+    geometry: {
+      type: "Point",
+      coordinates: [
+        -85.6768,
+        38.189,
+        { city: "Louisville", state: "Kentucky" },
+      ],
+    },
+  },
+  {
+    type: "Feature",
+    properties: { featureIndex: 7, distanceToPoint: 4.902446250459124 },
+    geometry: {
+      type: "Point",
+      coordinates: [
+        -93.29229889999999,
+        37.2089572,
+        { city: "Springfield", state: "Missouri" },
+      ],
+    },
+  },
+  {
+    type: "Feature",
+    properties: { featureIndex: 7, distanceToPoint: 4.902446250459124 },
+    geometry: {
+      type: "Point",
+      coordinates: [-95.0998, 29.5716, { city: "League City", state: "Texas" }],
+    },
+  },
+  {
+    type: "Feature",
     properties: { featureIndex: 7, distanceToPoint: 4.902446250459124 },
     geometry: {
       type: "Point",
@@ -92,6 +136,18 @@ export const small = [
         -89.6501481,
         39.78172130000001,
         { city: "Springfield", state: "Illinois" },
+      ],
+    },
+  },
+  {
+    type: "Feature",
+    properties: { featureIndex: 8, distanceToPoint: 2.908327798841014 },
+    geometry: {
+      type: "Point",
+      coordinates: [
+        -86.7852,
+        36.1866,
+        { city: "Nashville", state: "Tennessee" },
       ],
     },
   },
@@ -117,6 +173,14 @@ export const small = [
         61.2180556,
         { city: "Anchorage", state: "Alaska" },
       ],
+    },
+  },
+  {
+    type: "Feature",
+    properties: { featureIndex: 11, distanceToPoint: 5.011472904806767 },
+    geometry: {
+      type: "Point",
+      coordinates: [-95.2499, 38.959, { city: "Lawrence", state: "Kansas" }],
     },
   },
   {
@@ -197,9 +261,9 @@ export const small = [
     geometry: {
       type: "Point",
       coordinates: [
-        -79.9958864,
-        40.44062479999999,
-        { city: "Pittsburgh", state: "Pennsylvania" },
+        -80.0649,
+        40.612,
+        { city: "Wexford", state: "Pennsylvania" },
       ],
     },
   },
@@ -212,6 +276,18 @@ export const small = [
         -81.162316,
         36.141082,
         { city: "Wilkesboro", state: "North Carolina" },
+      ],
+    },
+  },
+  {
+    type: "Feature",
+    properties: { featureIndex: 21, distanceToPoint: 7.388684520795382 },
+    geometry: {
+      type: "Point",
+      coordinates: [
+        -80.2228,
+        36.1024,
+        { city: "Winston Salem", state: "North Carolina" },
       ],
     },
   },
