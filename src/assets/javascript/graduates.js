@@ -3398,14 +3398,14 @@ export const graduates = [
     firstName: "Pawina",
     finalYearInResidencyProgram: 2022,
     academicRank0IfNotRanked1fellow2instructor3asstProf4assocProf5professor: 1,
-    zipcode: 48109,
+    zipcode: 92093,
   },
   {
     lastName: "Valenzuela",
     firstName: "Carla",
     finalYearInResidencyProgram: 2022,
     academicRank0IfNotRanked1fellow2instructor3asstProf4assocProf5professor: 1,
-    zipcode: 92093,
+    zipcode: 48109,
   },
   {
     lastName: "Skillington",
