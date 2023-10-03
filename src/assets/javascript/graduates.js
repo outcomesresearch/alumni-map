@@ -280,7 +280,7 @@ export const graduates = [
     numberOfPeerReviewedPublications: 13,
     allCitationsCareer: 307,
     nihGrantsReceived: 0,
-    academicRank0IfNotRanked1fellow2instructor3asstProf4assocProf5professor: 3,
+    academicRank0IfNotRanked1fellow2instructor3asstProf4assocProf5professor: 0,
     titles:
       "Assistant Professor; Associate Director, Resident Education Program",
     currentAffiliation: "Washington University School of Medicine in St. Louis",
