@@ -323,4 +323,27 @@ export const small = [
       ],
     },
   },
+  {
+    type: "Feature",
+    properties: { featureIndex: 26, distanceToPoint: 1.652251640402955 },
+    geometry: {
+      type: "Point",
+      coordinates: [
+        -86.53527875136474,
+        39.16030011161718,
+        { city: "Bloomington", state: "Indiana" },
+      ],
+    },
+  },
+  {
+    type: "Feature",
+    properties: { featureIndex: 26, distanceToPoint: 1.652251640402955 },
+    geometry: {
+      type: "Point",
+      coordinates: [
+        -83.73833881075346, 42.25371166737298,
+        { city: "Ann Arbor", state: "Michigan" },
+      ],
+    },
+  },
 ];

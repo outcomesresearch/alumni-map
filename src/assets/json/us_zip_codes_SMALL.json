@@ -1155,5 +1155,21 @@
     "County": "Orleans",
     "Latitude": 29.9504,
     "Longitude": -90.1236
+  },
+  {
+    "Zip Code": 47403,
+    "Place Name": "Bloomington",
+    "State": "Indiana",
+    "State Abbreviation": "IN",
+    "Latitude": 39.16030011161718,
+    "Longitude": -86.53527875136474
+  },
+  {
+    "Zip Code": 48104,
+    "Place Name": "Ann Arbor",
+    "State": "Michigan",
+    "State Abbreviation": "MI",
+    "Latitude": 42.25371166737298,
+    "Longitude": -83.73833881075346
   }
 ]
