@@ -28,3 +28,12 @@ export const RADIUS = (n) => Math.sqrt(n) * 10;
 export const COLOR = d3
   .scaleOrdinal()
   .range(Object.keys(TOOLTIP_COLORS).map((v) => TOOLTIP_COLORS[v].color));
+
+export const RANKS = {
+  UNRANKED: 'unranked',
+  FELLOW: 'fellow',
+  INSTRUCTOR: 'instructor',
+  ASSISTANT_PROFESSOR: 'assistant professor',
+  ASSOCIATE_PROFESSOR: 'associate professor',
+  PROFESSOR: 'professor'
+}
