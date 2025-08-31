@@ -346,4 +346,15 @@ export const small = [
       ],
     },
   },
+  {
+    type: "Feature",
+    properties: { featureIndex: 26, distanceToPoint: 1.652251640402955 },
+    geometry: {
+      type: "Point",
+      coordinates: [
+        -93.76568218476974, 32.471630703081026,
+        { city: "Shreveport", state: "Louisana" },
+      ],
+    },
+  },
 ];
