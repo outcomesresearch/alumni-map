@@ -236,10 +236,10 @@ export const graduates = [
     firstName: "Reena",
     maidenOrOtherName: "Married name is Patil",
     finalYearInResidencyProgram: 2003,
-    rank: RANKS.ASSOCIATE_PROFESSOR,
+    rank: RANKS.PROFESSOR,
     currentAffiliation: "University of Cincinnati",
     departments: "Otolaryngology",
-    zipcode: 45219,
+    zipcode: 60611,
   },
   {
     lastName: "Drescher",
@@ -842,7 +842,7 @@ export const graduates = [
     rank: RANKS.ASSISTANT_PROFESSOR,
     currentAffiliation: "UNLV School of Medicine",
     departments: "Head and Neck Oncology and Microvascular Surgery",
-    zipcode: 89102,
+    zipcode: 32224,
   },
   {
     lastName: "Olomu",
@@ -1396,8 +1396,8 @@ export const graduates = [
     lastName: "Valenzuela",
     firstName: "Carla",
     finalYearInResidencyProgram: 2022,
-    rank: RANKS.FELLOW,
-    zipcode: 48109,
+    rank: RANKS.UNRANKED,
+    zipcode: 22030,
   },
   {
     lastName: "Skillington",
