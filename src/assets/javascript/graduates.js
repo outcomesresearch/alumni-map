@@ -1494,8 +1494,8 @@ export const graduates = [
     lastName: "Barrett",
     firstName: "Thomas",
     finalYearInResidencyProgram: 2025,
-    rank: RANKS.FELLOW,
-    zipcode: 7101,
+    rank: RANKS.ASSISTANT_PROFESSOR,
+    zipcode: 14618,
   },
   {
     lastName: "Dang",
@@ -1524,6 +1524,34 @@ export const graduates = [
     finalYearInResidencyProgram: 2025,
     rank: RANKS.UNRANKED,
     zipcode: 78705,
+  },
+  {
+    lastName: "Charap",
+    firstName: "Andrew",
+    finalYearInResidencyProgram: 2026,
+    rank: RANKS.UNRANKED,
+    zipcode: 19104,
+  },
+  {
+    lastName: "Lee",
+    firstName: "David",
+    finalYearInResidencyProgram: 2026,
+    rank: RANKS.FELLOW,
+    zipcode: 37235,
+  },
+  {
+    lastName: "Roh",
+    firstName: "Joseph",
+    finalYearInResidencyProgram: 2026,
+    rank: RANKS.UNRANKED,
+    zipcode: 63110,
+  },
+  {
+    lastName: "Tharakan",
+    firstName: "Theresa",
+    finalYearInResidencyProgram: 2026,
+    rank: RANKS.FELLOW,
+    zipcode: 33136,
   },
 ].map(graduate => {
   return {
